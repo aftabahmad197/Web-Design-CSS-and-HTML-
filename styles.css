@@ -1,0 +1,384 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #2d2d2d; /* Dark background */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #fff; /* White text color */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #45a049; /* Highlight color on hover */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0; /* Light background */
+    color: #333;
+}
+
+main {
+    padding: 40px;
+}
+
+.home h2,
+.services h2,
+.about h2,
+.contact h2,
+.reviews h2 {
+    font-size: 2.5em;
+    color: #2d2d2d; /* Darker heading color */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Style for Services Section */
+.services {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.service:hover {
+    transform: scale(1.05);
+}
+
+.service img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.service h3 {
+    margin-top: 15px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Style for About Us Section */
+.about {
+    margin-top: 20px;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-image {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.about-image img {
+    max-width: 100%;  /* Ensure the image doesn't exceed its natural size */
+    max-height: 100%; /* Set a maximum height to maintain design constraints */
+    width: auto;      /* Allow the width to adjust proportionally with the height */
+    height: 300px;    /* Set a fixed height for the image box */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+
+/* Style for Contact Section */
+.contact {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffcc00; /* Highlight the header with a futuristic color */
+}
+
+.contact p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ffcc00; /* Border color */
+    border-radius: 8px;
+    background-color: #333;
+    color: #fff;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #ffcc00; /* Highlight border color on focus */
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allow vertical resizing of textarea */
+}
+
+.contact-form button {
+    padding: 15px 30px;
+    background-color: #ffcc00;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for button color */
+}
+
+.contact-form button:hover {
+    background-color: #1a1a1a; /* Change button color on hover */
+    color: #ffcc00; /* Change text color on hover */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .contact-form {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-form {
+        width: 100%;
+    }
+    .contact-form button {
+        width: 100%;
+    }
+}
+
+/* Style for Featured Section */
+.featured {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.featured h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.featured-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow services to wrap on smaller screens */
+    justify-content: space-around;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.service-card {
+    flex: 0 0 calc(30% - 20px);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background-color: #555;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 10px 20px 10px;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    background-color: #777;
+}
+
+.service-card:not(.hide-service) {
+    opacity: 1;
+}
+
+.service-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.service-card h3 {
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .service-card {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .service-card {
+        flex: 0 0 calc(100% - 20px);
+    }
+}
+
+
+/* Style for Additional Content Section */
+.additional-content {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.content-item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.content-item:hover {
+    transform: scale(1.05);
+}
+
+.content-item img {
+    max-width: 100%;  /* Ensure the image doesn't exceed its natural size */
+    max-height: 100%; /* Set a maximum height to maintain design constraints */
+    width: auto;      /* Allow the width to adjust proportionally with the height */
+    height: 60px;    /* Set a fixed height for the image box */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.content-item h3 {
+    margin-top: 15px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Style for Customer Reviews Section */
+.reviews {
+    margin-top: 50px;
+}
+
+.review {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.review img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.review-text h3 {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.review-text p {
+    font-style: italic;
+    color: #666;
+}
+
+/* Style for Hover Chat Support Button */
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #4CAF50; /* Change the color as needed */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.chat-button img {
+    width: 30px; /* Adjust the icon size as needed */
+}
+
+.chat-button:hover {
+    background-color: #45a049; /* Change the hover color as needed */
+}
+
+
+/* Add additional styles, layouts, and media queries as needed */
